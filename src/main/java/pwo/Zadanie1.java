@@ -13,11 +13,14 @@ public class Zadanie1 {
     public static void main(String[] args) {
         System.out.println("Fibonacci wersja 2");
         boolean ok = SequenceTools.writeToFile(
-                new FibonacciGenerator(), FROM, TO, FILE_NAME);
+                new FibonacciGenerator(), FROM, TO, FILE_NAME,
+                FibonacciGenerator.f_1, FibonacciGenerator.f_2);
         if (ok) {
             System.out.println("Wynik zapisany do pliku: " + FILE_NAME);
         } else {
             System.out.println("Błąd");
         }
+
+        Zadanie2.zadanie2();
     }
 }
